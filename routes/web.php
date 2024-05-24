@@ -24,7 +24,8 @@ Route::get('/blog', [PostController::class, 'index'])->name('posts.index');
 
 Route::get('/blog/{post:slug}', [PostController::class, 'show'])->name('posts.show');
 
-Route::get('/listservice', [ListService::class,'render'])->name('listservice');
+Route::get('/listservice', ListService::class)->name('listservice');
+// Route::get('/listservice', [ListService::class,'render'])->name('listservice');
 
 Route::post('/sendId', [ListService::class,'getDdetail'])->name('sendID');
 

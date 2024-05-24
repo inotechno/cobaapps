@@ -13,18 +13,22 @@ class ListService extends Component
 
     public $perPage = 10;
     public $search = '';
-
+public $type;
     public $service_desc,$service_endpoint_esb ,$service_endpoint_msr,$service_postman;
 
+  public function changeUser($id)
+  {
+    dd($id);
+  }
 
     public function render()
     {
-         $allservice = serviceList::get();
+        $allservice = serviceList::get();
 
         return view('livewire.service-list',[
             'servicelists' =>  serviceList::search($this->search)->paginate($this->perPage)
 
-        ]);
+        ])->layout('layouts.app');
 
     }
 

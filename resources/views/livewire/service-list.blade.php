@@ -1,4 +1,4 @@
-<x-app-layout>
+
     <div class="row" style="width: 120%">
         <section class="mt-10">
             <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
@@ -25,10 +25,10 @@
                             <div class="flex space-x-3 items-center">
                                 <label class="w-40 text-sm font-medium text-gray-900">User Type :</label>
                                 <select
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
-                                    <option value="">All</option>
-                                    <option value="0">User</option>
-                                    <option value="1">Admin</option>
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " wire:model.live="type">
+                                    <option value="" >All</option>
+                                    <option value="0" >User</option>
+                                    <option value="1" >Admin</option>
                                 </select>
                             </div>
                         </div>
@@ -94,78 +94,3 @@
         </section>
 
     </div>
-
-
-
-
-    {{-- <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2">
-                <input wire::model.live='search' class="form-control" type="text">
-
-
-            </div>
-
-        </div>
-        <table class="table table-striped table-hover " style="table-layout: fixed; width: 100%">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>serviece id</th>
-                    <th>service name</th>
-                    <th>end point</th>
-                    <th>Description</th>
-                    <th>Action</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($servicelists as $service)
-                    <tr>
-                        <td>{{ $service->id }}</td>
-                        <td>{{ $service->service_id }}</td>
-                        <td>{{ $service->service_name }}</td>
-                        <td>{{ $service->service_name }}</td>
-                        <td>{{ $service->service_name }}</td>
-                        <td>
-
-                            <a href="#" wire:click=" getDdetail({{ $service->id }}) "
-                                class="btn btn-warning ; border-radius : 5px" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
-                                <span class="icons fi-social-pinterest"></span>
-                                <i class='bx bx-folder nav_icon'></i>
-                            </a>
-                        </td>
-
-                    </tr>
-                @endforeach
-
-            </tbody>
-
-        </table>
-
-
-        <div class="row">
-            <div class="col-md-2">
-                <select wire:model.live='perPage' class="form-select">
-                    <option value="10">10</option>
-                    <option value="30">30</option>
-                    <option value="50">50</option>
-                </select>
-            </div>
-
-            <div class="col-md-11">
-                {{ $servicelists->links() }}
-            </div>
-
-
-        </div>
-
-    </div> --}}
-
-
-
-
-
-
-</x-app-layout>
