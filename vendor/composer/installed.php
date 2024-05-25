@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c5b2259743782fb6ebc7e5ecc0140df59c9aec98',
+        'reference' => '1c9e537db0c9ab29f2f66bc8022a16caa1af2975',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -580,7 +580,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c5b2259743782fb6ebc7e5ecc0140df59c9aec98',
+            'reference' => '1c9e537db0c9ab29f2f66bc8022a16caa1af2975',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -659,9 +659,9 @@
             'dev_requirement' => false,
         ),
         'league/csv' => array(
-            'pretty_version' => '9.15.0',
-            'version' => '9.15.0.0',
-            'reference' => 'fa7e2441c0bc9b2360f4314fd6c954f7ff40d435',
+            'pretty_version' => '9.16.0',
+            'version' => '9.16.0.0',
+            'reference' => '998280c6c34bd67d8125fdc8b45bae28d761b440',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/csv',
             'aliases' => array(),
@@ -1045,8 +1045,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '3.0.0',
-                1 => '1.0|2.0|3.0',
+                0 => '1.0|2.0|3.0',
+                1 => '3.0.0',
             ),
         ),
         'psr/simple-cache' => array(

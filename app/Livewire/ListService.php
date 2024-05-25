@@ -14,8 +14,21 @@ class ListService extends Component
     public $perPage = 10;
     public $search = '';
     public $type;
+    public $modal = false;
 
-    public $service_desc, $service_endpoint_esb, $service_endpoint_msr, $service_postman;
+    public $service_desc, $service_endpoint_esb, $service_endpoint_msr, $service_postman, $selectedService;
+
+    public function openModal($service)
+    {
+        $this->selectedService = $service;
+        $this->modal = true;
+    }
+
+    public function closeModal()
+    {
+        $this->modal = false;
+        $this->selectedService = null;
+    }
 
     public function render()
     {
@@ -24,7 +37,6 @@ class ListService extends Component
         return view('livewire.service-list', [
             'servicelists' => serviceList::search($this->search)->paginate($this->perPage)
         ])->layout('layouts.app');
-
     }
 
     public function download($id)
@@ -36,5 +48,4 @@ class ListService extends Component
         // ]);
 
     }
-
 }
